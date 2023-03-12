@@ -25,10 +25,10 @@
 \usepackage{geometry}
  \geometry{
   letterpaper,
-  top=.5in,
-  right=.5in,
-  bottom=.5in,
-  left=.5in
+  top=.4in,
+  right=.4in,
+  bottom=.4in,
+  left=.4in
  }
 
 \urlstyle{same}      
@@ -52,10 +52,18 @@
 }
 
 \newcommand{\resumeSubheading}[4]{
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}
+}
+
+\newcommand{\Experience}[5]{
+  \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{\small#3} \textit{\footnotesize (#4)} & \textit{\small #5} \\
+  \end{tabular*}
+  \linebreak
 }
 
 \newcommand{\skill}[2]{
@@ -73,7 +81,6 @@
 
 \newcommand{\subenum}[1]{\-\ \-\ \-\ \-\ - \textit{\footnotesize #1} \\}
 
-
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
 
 \renewcommand{\labelitemii}{$\circ$}
@@ -90,7 +97,7 @@
 \begin{document}
 
 %----------HEADING-----------------
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+\begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
   \huge \textbf{Levi Carroll} & \textbf{Email:} ldcarroll42@gmail.com\\
   & \textbf{Phone:} 209-910-5384 \\
   \vspace{-1cm}
@@ -102,70 +109,72 @@
 \vspace{.25cm}
 \resumeSubheading
 {Tennessee Technological University}{Cookeville, Tennessee}
-{BS in Electrical Engineering}{2014 - 2020}
+{BS in Electrical Engineering (GPA 3.09)}{2014 - 2020}
+
+%-----------EXPERIENCE-----------------
+
+\section{Experience}
+\vspace{.25cm}
+\Experience
+{Dynetics}{Huntsville, AL}
+{Electrical/Software Engineer}{Python, Java, C\#, C++}{Oct. 2021 – Present}
+  
+  I worked primarily as a developer in Java, Python, C\#, and C++. The majority of my work is developing and integrating a communication software base allowing for the interoperability of autonomous vehicles. My duties involve creating code to integrate functionality for vehicles and sensor payloads, testing and reviewing code changes, and managing continus integration pipelines. Separate from my regular duties I work on a research and development project creating an AR Android application to support mission tracking in the field.
+
+\bigskip
+\Experience
+{GLC Technologies}{Huntsville, AL}
+{Electrical/Software Engineer}{Python}{Oct. 2020 – Oct. 2021}
+  
+  While at GLC my responsibilities consisted of writing automation tools for the streamlining of a tool-of-tools microprocessor emulation process, creating low-level models of transistor degradation, and creating and maintaining a tool for collecting and viewing gate-level microprocessor temperature models.
+
+\bigskip
+\Experience
+{Center for Energy Systems Research}{Cookeville, TN}
+{Undergraduate Researcher}{Arduino, Python}{Oct 2019 – May 2020}
+  
+  I Designed and built tools to help test long-range capacitive wireless power transfer systems. I Participated in ‘in the field’ tests of high voltage long-range wireless power transfer systems.
+
+\bigskip
+\Experience
+{American Cast Iron Pipe Company}{Birmingham, AL}
+{Full-Time Intern}{Ladder Logic, Python}{May 2019 – Aug 2019}
+  
+  I Saved the facility conservatively \$250,000 in process improvements, programmed PLC controls and Siemens HMI panels and fixed problems in machinery and control systems. I also collected and analyzed data on complex systems in an efort to further improve productivity.
 
 %-------------SKILLS-------------------
 \section{Skills}
 \vspace{.25cm}
 \begin{multicols}{3}
   \textbf{Programing Languages } \\                    
-  \skill{Python}{4+ Years}
-  \skill{C++}{2+ Years}
-  \skill{Java}{1+ Years}
-  \skill{C\#}{\textless 1 Years}
-  \skill{Bash}{7+ Years}
-  \skill{Powershell}{2+ Years}
-  \skill{Arduino}{3+ Years}
-  \skill{\LaTeX}{2+ Years} \\
+    \skill{Python}{4+ Years}
+    \skill{C++}{2+ Years}
+    \skill{Java}{1+ Years}
+    \skill{C\#}{\textless 1 Years}
+    \skill{Bash}{7+ Years}
+    \skill{Powershell}{2+ Years}
+    \skill{Arduino}{3+ Years} \\
 
   \columnbreak
   \textbf{Operating Systems} \\
-  \skill{Linux}{8+ Years}
-    \subenum{RHEL}
-    \subenum{CentOS}
-    \subenum{Arch Linux}
-    \subenum{Ubuntu}
-  \skill{Windows}{3+ Years}
-  \skill{MacOS}{1+ Years}\\
+    \skill{Linux}{8+ Years}
+      \subenum{RHEL}
+      \subenum{CentOS}
+      \subenum{Arch Linux}
+      \subenum{Ubuntu}
+    \skill{Windows}{3+ Years}
+    \skill{MacOS}{1+ Years}\\
 
   \columnbreak
   \textbf{Tools} \\
-  \skill{Git}{5+ Years}
-  \skill{Visual Studio}{2+ Years}
-  \skill{MATLAB}{3+ Years}
-  \skill{Octave}{3+ Years}
-  \skill{PyCharm}{1+ Years}
-  \skill{Microsoft Office Suit}{8+ Years}
-  \skill{Cisco IOS}{\textless 1 Year}
-  \skill{Docker}{\textless 1 Year}
+    \skill{Git}{3+ Years}
+    \skill{Visual Studio}{2+ Years}
+    \skill{MATLAB}{3+ Years}
+    \skill{PyCharm}{1+ Years}
+    \skill{Rest}{1+ Years}
+    \skill{Cisco IOS}{\textless 1 Year}
+    \skill{Docker}{\textless 1 Year} \\
 \end{multicols}
-
-%-----------EXPERIENCE-----------------
-
-\section{Experience}
-\vspace{.25cm}
-\resumeSubheading
-{Dynetics}{Huntsville, AL}
-{Electrical/Software Engineer \small (Python, Java, C\#, C++)}{Oct. 2021 – Present}
-  Worked as a member of an agile team supporting military UAV systems by writing, maintain, and testing software in C\#, Java, C++, Python, and Bash. Wrote software improvements to a large existing codebase. 
-
-\bigskip
-\resumeSubheading
-{GLC Tech, Inc.}{Huntsville, AL}
-{Electrical/Software Engineer \small (Python)}{Oct. 2020 – Oct. 2021}
-  Created software for the generation, management, and analysis of large data sets. Streamlined and automated complex emulation workflows. Performed complex numerical validations of proposed transistor degradation mechanics.
-
-\bigskip
-\resumeSubheading
-{Center for Energy Systems Research}{Cookeville, TN}
-{Undergraduate Researcher \small (Arduino, Python)}{Oct 2019 – May 2020}
-  Designed and built tools to help test long-range capacitive wireless power transfer systems. Participated in ‘in the field’ tests of high voltage long-range wireless power transfer systems.
-
-\bigskip
-\resumeSubheading
-{American Cast Iron Piping Company}{Birmingham, AL}
-{Full-Time Intern \small (Ladder Logic, Python)}{May 2019 – Aug 2019}
-  Saved the facility conservatively \$250,000 in process improvements. Programmed PLC controls and Siemens HMI panels. Fixed problems in machinery and control systems. Collected and analyzed data on complex systems.
 
 %-----------REFERENCES-----------------
 \section{References}
